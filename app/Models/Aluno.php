@@ -15,4 +15,9 @@ class Aluno extends Model
     ];
 
     protected $table = 'aluno';
+
+    public function insere($data)
+    {
+        return $this->save($data);
+    }
 }

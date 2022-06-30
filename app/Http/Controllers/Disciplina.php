@@ -31,6 +31,6 @@ class Disciplina extends Controller
 
         $data[] = $disciplinaModel;
         $disciplinaModel->insere($data);
+        return redirect('/disciplina');
     }
 }
-    

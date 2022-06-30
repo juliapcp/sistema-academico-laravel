@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Disciplina;
+use App\Http\Controllers\Aluno;
+use App\Http\Controllers\Professor;
 use App\Http\Controllers\Index;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +27,7 @@ Route::post('insereDisciplina',  'App\Http\Controllers\Disciplina@inserir');
 Route::get('/aluno',  [Aluno::class, 'listagem']);
 Route::get('/aluno/inserir',  [Aluno::class, 'mostraInserir']);
 Route::post('insereAluno',  'App\Http\Controllers\Aluno@inserir');
+
+Route::get('/professor',  [Professor::class, 'listagem']);
+Route::get('/professor/inserir',  [Professor::class, 'mostraInserir']);
+Route::post('insereProfessor',  'App\Http\Controllers\Professor@inserir');
