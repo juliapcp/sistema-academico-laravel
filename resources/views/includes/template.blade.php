@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <style>
         body,
         h1,
@@ -68,6 +69,7 @@
 
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script>
         // Script to open and close sidebar
         function w3_open() {
@@ -79,6 +81,14 @@
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
         }
+        $(document).ready(function() {
+            $('.multiselect').select2();
+        });
+        $(document).ready(function() {
+            $('input').keyup(function() {
+                $(this).val($(this).val().toUpperCase());
+            });
+        });
     </script>
 
 </body>

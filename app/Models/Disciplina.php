@@ -17,7 +17,8 @@ class Disciplina extends Model
 
     public function insere($data)
     {
-        return $this->save($data);
+        $this->save($data);
+        return $this->id;
     }
 
     public function todasDisciplinas()
