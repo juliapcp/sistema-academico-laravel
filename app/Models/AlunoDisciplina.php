@@ -7,5 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class AlunoDisciplina extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'idAluno',
+        'idDisciplina',
+        'media',
+        'frequencia'
+    ];
+
+    protected $table = 'alunodisciplina';
+
+    public function insere($data)
+    {
+        return $this->save($data);
+    }
+
+
 }

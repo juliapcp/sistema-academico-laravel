@@ -33,10 +33,10 @@
             <h4><b>Sistema Acadêmico</b></h4>
         </div>
         <div class="w3-bar-block">
-            <a href="" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>DASHBOARD</a>
-            <a href="" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa fa-graduation-cap w3-margin-right"></i>ALUNOS</a>
-            <a href="" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa fa-book w3-margin-right"></i>DISCIPLINAS</a>
-            <a href="" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa fa-user w3-margin-right"></i>PROFESSORES</a>
+            <a href="/" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>DASHBOARD</a>
+            <a href="/aluno" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa fa-graduation-cap w3-margin-right"></i>ALUNOS</a>
+            <a href="/disciplina" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa fa-book w3-margin-right"></i>DISCIPLINAS</a>
+            <a href="/professor" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa fa-user w3-margin-right"></i>PROFESSORES</a>
         </div>
 
     </nav>
@@ -54,9 +54,9 @@
             <div class="w3-container">
                 <h1><b>Sistema Acadêmico</b></h1>
                 <div class="w3-section w3-bottombar w3-padding-16">
-                    <button class="w3-button w3-white"><i class="fa fa-graduation-cap w3-margin-right"></i>ALUNOS</button>
-                    <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>DISCIPLINAS</button>
-                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-user w3-margin-right"></i>PROFESSORES</button>
+                    <button onclick="location.href = '/aluno'" class="w3-button w3-white"><i class="fa fa-graduation-cap w3-margin-right"></i>ALUNOS</button>
+                    <button onclick="location.href = '/disciplina'" class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>DISCIPLINAS</button>
+                    <button onclick="location.href = '/professor'" class="w3-button w3-white w3-hide-small"><i class="fa fa-user w3-margin-right"></i>PROFESSORES</button>
                 </div>
             </div>
         </header>

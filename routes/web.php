@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Disciplina;
 use App\Http\Controllers\Index;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',  [Index::class, 'index']);
+
+Route::get('/disciplina',  [Disciplina::class, 'listagem']);
+Route::get('/disciplina/inserir',  [Disciplina::class, 'mostraInserir']);
+Route::post('insereDisciplina',  'App\Http\Controllers\Disciplina@inserir');
+
+Route::get('/aluno',  [Aluno::class, 'listagem']);
+Route::get('/aluno/inserir',  [Aluno::class, 'mostraInserir']);
+Route::post('insereAluno',  'App\Http\Controllers\Aluno@inserir');
