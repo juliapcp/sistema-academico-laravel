@@ -26,6 +26,7 @@ Route::post('insereDisciplina',  'App\Http\Controllers\Disciplina@inserir');
 
 Route::get('/aluno',  [Aluno::class, 'listagem']);
 Route::get('/aluno/inserir',  [Aluno::class, 'mostraInserir']);
+Route::get('/aluno/perfil/{id}', [Aluno::class, 'mostraPerfil']);
 Route::post('insereAluno',  'App\Http\Controllers\Aluno@inserir');
 
 Route::get('/professor',  [Professor::class, 'listagem']);

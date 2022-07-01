@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aluno as ModelsAluno;
+use App\Models\AlunoDisciplina;
 use Illuminate\Http\Request;
 
 class Aluno extends Controller
@@ -17,6 +18,16 @@ class Aluno extends Controller
     public function mostraInserir()
     {
         return view('aluno/inserir');
+    }
+
+    public function mostraPerfil($id)
+    {
+        $alunoDisciplinaModel = new AlunoDisciplina();
+        $data['disciplinas'] = $alunoDisciplinaModel->disciplinasAlunoMatriculado($id);
+
+        $alunoModel = new ModelsAluno;
+        $data['aluno'] = $alunoModel->getById($id);
+        return view('aluno/perfil', $data);
     }
 
     public function inserir(Request $request)

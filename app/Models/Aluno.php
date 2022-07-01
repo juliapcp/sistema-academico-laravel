@@ -20,4 +20,10 @@ class Aluno extends Model
     {
         return $this->save($data);
     }
+
+    public function getById($id)
+    {
+        $builder = Aluno::where('id', '=', $id);
+        return $builder->first();
+    }
 }

@@ -22,5 +22,13 @@ class AlunoDisciplina extends Model
         return $this->save($data);
     }
 
+    public function disciplinasAlunoMatriculado($idAluno)
+    {
+        $builder = AlunoDisciplina::join('disciplina', 'disciplina.id', '=', 'alunodisciplina.idDisciplina');
+        $builder->join('professor', 'disciplina.idProfessor', '=', 'professor.id');
+        $builder->where('idAluno', '=', $idAluno);
+        $builder->select('disciplina.nome as nomeDisciplina', "professor.nome as nomeProfessor", "cargaHoraria", "frequencia", "media");
+        return $builder->get();
+    }
 
 }
