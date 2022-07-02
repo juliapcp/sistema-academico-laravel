@@ -13,7 +13,7 @@
             <tbody>
                 @foreach ($disciplinas as $disciplina)
                 <tr>
-                    <td> <a href="{{ url('disciplina/'.$disciplina['idDisciplina'])}}"><i class="fa fa-eye w3-margin-right w3-text-blue"></i></a></td>
+                    <td> <a href="{{ url('disciplina/perfil/'.$disciplina['idDisciplina'])}}"><i class="fa fa-eye w3-margin-right w3-text-blue"></i></a></td>
                     <td> {{ $disciplina['nomeDisciplina'] }} </td>
                     <td> {{ $disciplina['nomeProfessor'] }} </td>
                     <td> {{ $disciplina['cargaHoraria'] }}h </td>

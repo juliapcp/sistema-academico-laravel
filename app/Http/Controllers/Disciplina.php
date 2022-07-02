@@ -48,4 +48,14 @@ class Disciplina extends Controller
         }
         return redirect('/disciplina');
     }
+
+    public function mostraPerfil($id)
+    {
+        $disciplina = new ModelsDisciplina();
+        $professorModel = new Professor;
+        $data['disciplina'] = $disciplina->getById($id);
+        $data['alunos'] = $disciplina->alunosMatriculados($id);
+        $data['professores'] = $professorModel->get();
+        return view('disciplina/perfil', $data);
+    }
 }

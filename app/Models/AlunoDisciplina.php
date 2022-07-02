@@ -27,7 +27,7 @@ class AlunoDisciplina extends Model
         $builder = AlunoDisciplina::join('disciplina', 'disciplina.id', '=', 'alunodisciplina.idDisciplina');
         $builder->join('professor', 'disciplina.idProfessor', '=', 'professor.id');
         $builder->where('idAluno', '=', $idAluno);
-        $builder->select('disciplina.nome as nomeDisciplina', "professor.nome as nomeProfessor", "cargaHoraria", "frequencia", "media");
+        $builder->select("idDisciplina",'disciplina.nome as nomeDisciplina', "professor.nome as nomeProfessor", "cargaHoraria", "frequencia", "media", (\DB::raw("(case when frequencia < 75 then 'RF' else (case when media < 7 then 'R'	else 'A' end) end) as situacao")));
         return $builder->get();
     }
 

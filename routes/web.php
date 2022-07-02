@@ -22,6 +22,7 @@ Route::get('/',  [Index::class, 'index']);
 
 Route::get('/disciplina',  [Disciplina::class, 'listagem']);
 Route::get('/disciplina/inserir',  [Disciplina::class, 'mostraInserir']);
+Route::get('/disciplina/perfil/{id}', [Disciplina::class, 'mostraPerfil']);
 Route::post('insereDisciplina',  'App\Http\Controllers\Disciplina@inserir');
 
 Route::get('/aluno',  [Aluno::class, 'listagem']);

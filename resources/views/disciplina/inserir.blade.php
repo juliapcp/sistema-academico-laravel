@@ -57,9 +57,4 @@
         $(document).ready(function() {
             $('.multiselect').select2();
         });
-        $(document).ready(function() {
-            $('input').keyup(function() {
-                $(this).val($(this).val().toUpperCase());
-            });
-        });
     </script>

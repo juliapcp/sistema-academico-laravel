@@ -28,21 +28,25 @@
         <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
             <thead>
                 <tr>
+                    <th></th>
                     <th>Disciplina</th>
                     <th>Professor</th>
                     <th>Carga Horária</th>
                     <th>Frequência</th>
                     <th>Média</th>
+                    <th>Situação</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($disciplinas as $disciplina)
                 <tr>
+                    <td> <a href="{{ url('disciplina/perfil/'.$disciplina['idDisciplina'])}}"><i class="fa fa-eye w3-margin-right w3-text-blue"></i></a></td>
                     <td> {{ $disciplina['nomeDisciplina'] }} </td>
                     <td> {{ $disciplina['nomeProfessor'] }} </td>
                     <td> {{ $disciplina['cargaHoraria'] }}h </td>
                     <td> {{ $disciplina['frequencia'] }} </td>
                     <td> {{ $disciplina['media'] }} </td>
+                    <td> {{ $disciplina['situacao'] }} </td>
                 </tr>
                 @endforeach
             </tbody>

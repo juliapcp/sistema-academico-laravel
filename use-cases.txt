@@ -7,7 +7,7 @@ Desenvolver um sistema acadêmico simples, sem login:
 --Alocar professores as suas disciplinas
 --Cada aluno deve ser matriculado às disciplinas.
 --Cada disciplina terá apenas a média final e frequência.
-Apresentar se o aluno foi reprovado ou aprovado, ou reprovado por frequência.
+--Apresentar se o aluno foi reprovado ou aprovado, ou reprovado por frequência.
 Não deixar matricular o aluno com carga horária maior que 50.
 
 Responder as perguntas:
@@ -15,5 +15,5 @@ Responder as perguntas:
 --O professor fulano ministra aulas para o aluno ciclano?
 --Listar disciplinas de um dado professor
 --Listar todos os alunos de um professor
-Apresentar o aluno que tirou a nota mais alta
+--Apresentar o aluno que tirou a nota mais alta
 --Quais disciplinas de um dado aluno?
