@@ -50,7 +50,9 @@
             <tbody>
                 @foreach ($alunos as $aluno)
                 <tr>
-                    <td> <a href="{{ url('aluno/perfil/'.$aluno['idAluno'])}}"><i class="fa fa-eye w3-margin-right w3-text-blue"></i></a></td>
+                    <td> <a href="{{ url('aluno/perfil/'.$aluno['idAluno'])}}"><i class="fa fa-eye w3-margin-right w3-text-blue"></i></a>
+                        <a href="{{ url('aluno/'.$aluno['idAluno'].'/editarFrequenciaMedia/'.$disciplina['id'])}}"><i class="fa fa-pencil w3-margin-right w3-text-blue"></i></a>
+                    </td>
                     <td> {{ $aluno['nomeAluno'] }} </td>
                     <td> {{ $aluno['frequencia'] }} </td>
                     <td class="media"> {{ $aluno['media'] }} <i class="fa fa-trophy w3-margin-left w3-text-yellow"></i> </td>

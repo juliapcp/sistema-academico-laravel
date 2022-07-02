@@ -29,6 +29,9 @@ Route::get('/aluno',  [Aluno::class, 'listagem']);
 Route::get('/aluno/inserir',  [Aluno::class, 'mostraInserir']);
 Route::get('/aluno/perfil/{id}', [Aluno::class, 'mostraPerfil']);
 Route::post('insereAluno',  'App\Http\Controllers\Aluno@inserir');
+Route::get('/aluno/{idAluno}/editarFrequenciaMedia/{idDisciplina}', [Aluno::class, 'mostraEditarFrequenciaMedia']);
+Route::post('editarFrequenciaMedia', [Aluno::class, 'editarFrequenciaMedia']);
+
 
 Route::get('/professor',  [Professor::class, 'listagem']);
 Route::get('/professor/inserir',  [Professor::class, 'mostraInserir']);

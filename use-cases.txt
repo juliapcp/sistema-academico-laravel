@@ -6,7 +6,7 @@ Desenvolver um sistema acadêmico simples, sem login:
 --Realizar o cadastro de professores.
 --Alocar professores as suas disciplinas
 --Cada aluno deve ser matriculado às disciplinas.
---Cada disciplina terá apenas a média final e frequência.
+Cada disciplina terá apenas a média final e frequência.
 --Apresentar se o aluno foi reprovado ou aprovado, ou reprovado por frequência.
 Não deixar matricular o aluno com carga horária maior que 50.
 

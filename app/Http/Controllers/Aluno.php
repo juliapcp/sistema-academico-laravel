@@ -30,6 +30,20 @@ class Aluno extends Controller
         return view('aluno/perfil', $data);
     }
 
+    public function mostraEditarFrequenciaMedia($idAluno, $idDisciplina)
+    {
+        $alunoModel = new ModelsAluno;
+        $data['dados'] = $alunoModel->getFrequenciaMedia($idAluno, $idDisciplina);
+        return view('aluno/editarFrequenciaMedia', $data);
+    }
+
+    public function editarFrequenciaMedia(Request $request)
+    {
+        AlunoDisciplina::where('id', $request->id)->update(['media' => $request->media]);
+        AlunoDisciplina::where('id', $request->id)->update(['frequencia' => $request->frequencia]);
+        return redirect('/disciplina/perfil/'. $request->idDisciplina);
+    }
+
     public function inserir(Request $request)
     {
         $alunoModel = new ModelsAluno;
@@ -41,4 +55,7 @@ class Aluno extends Controller
         $alunoModel->insere($data);
         return redirect('/aluno');
     }
+
+
+
 }
