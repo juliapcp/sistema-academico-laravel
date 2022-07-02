@@ -29,4 +29,12 @@ class Professor extends Controller
         $professorModel->insere($data);
         return redirect('/professor');
     }
+    public function mostraPerfil($id)
+    {
+        $professorModel = new ModelsProfessor;
+        $data['disciplinas'] = $professorModel->disciplinasProfessorMinistra($id);
+        $data['alunos'] = $professorModel->alunosEmSuasDisciplinas($id);
+        $data['professor'] = $professorModel->getById($id);
+        return view('professor/perfil', $data);
+    }
 }
